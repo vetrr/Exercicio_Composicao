@@ -5,6 +5,15 @@ public class OrderItem {
     Double price;
     Product product;
 
+    public OrderItem(){
+    }
+
+    public OrderItem(Integer quantity, Double price, Product product){
+        this.quantity = quantity;
+        this.price = price;
+        this.product = product;
+    }
+
     public Integer getQuantity() {
         return quantity;
     }
@@ -15,5 +24,9 @@ public class OrderItem {
     
     public Double subTotal(){
         return price*quantity;
+    }
+
+    public String toString(){
+        return product.getName() + ", $" + String.format("%.2f", price) + "Quantity" + quantity + ", Subtotal: $" + String.format("%.2f", subTotal());
     }
 }
