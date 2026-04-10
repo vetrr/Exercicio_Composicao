@@ -1,7 +1,6 @@
 package application;
 
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
@@ -41,7 +40,7 @@ public class App {
         int n = sc.nextInt();
 
         for(int i=0; i<n; i++){
-            System.out.print("Enter " + "#" + (i+1) + "item data: ");
+            System.out.println("Enter " + "#" + (i+1) + "item data: ");
             System.out.print("Enter product name: ");
             String productName = sc.next();
             System.out.print("Product price:");
@@ -59,8 +58,8 @@ public class App {
         }
         System.out.println();
         System.out.println("ORDER SUMMUARY:");
-
-
+        System.out.println();
+        System.out.println(order);
 
         sc.close();
     }
